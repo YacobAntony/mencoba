@@ -1,14 +1,5 @@
 <?php
-    // session start
-    if(!empty($_SESSION)){ }else{ session_start(); }
-    //session
-	if(!empty($_SESSION['ADMIN'])){ }else{ header('location:login.php'); }
-    // panggil file
-    require 'proses/panggil.php';
-    
-    // tampilkan form edit
-    $idGet = strip_tags($_GET['id']);
-    $hasil = $proses->tampil_data_id('tbl_user','id',$idGet);
+    // session sta
 ?>
 
 <!DOCTYPE HTML>
@@ -48,35 +39,23 @@
 									<input type="number" value="<?php echo $hasil['telepon'];?>" class="form-control" name="telepon" required>
 								</div>
 								<div class="form-group">
-									<label>Email</label>
-									<input type="harga" value="<?php echo $hasil['email'];?>" class="form-control" name="email" required>
-								</div>
-								<div class="form-group">
-									<label>Alamat</label>
-									<textarea name="alamat" class="form-control" required><?php echo $hasil['alamat'];?></textarea>
-								</div>
-								<div class="form-group">
-									<label>Username</label>
-									<input type="text" value="<?php echo $hasil['username'];?>" class="form-control" name="user" required>
-								</div>
-								<div class="form-group">
-									<label>Password</label>
-									<input type="password" value="" placeholder="ubah password" class="form-control" name="pass" required>
-									<input type="hidden" value="<?php echo $hasil['id'];?>" class="form-control" name="id" required>
-								</div>
-
-								<div class="form-group">
-									<label>Password</label>
-									<input type="password" value="" placeholder="ubah password" class="form-control" name="pass" required>
-									<input type="hidden" value="<?php echo $hasil['id'];?>" class="form-control" name="id" required>
-								</div>
-								<button class="btn btn-primary btn-md" name="create"><i class="fa fa-edit"> </i> Edit Data</button>
-							</form>
-						</div>
-					</div>
+			
 				</div>
 				<div class="col-sm-3"></div>
 			</div>
 		</div>
 	</body>
+					
+
+	<head>
+		<title>Edit Pengguna</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+    <body style="background:#586df5;">
+		<div class="container">
+			<br/>
+            <span style="color:#fff";>Selamat Datang, <?php ec
+					
+					
 </html>
